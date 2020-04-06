@@ -1,8 +1,16 @@
 package com.colorpix.rest.webservices.restfulwebservices.todo;
 
-import java.util.Date;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 
-public class Todo {
+import java.util.Date;
+import java.util.Objects;
+
+public class Todo{
+
+
+    public Todo() {
+    }
 
     public long getId() {
         return id;
@@ -45,16 +53,15 @@ public class Todo {
     }
 
     public Todo(long id, String username, String description, Date targetDate, boolean isCompleted) {
+
         this.id = id;
         this.username = username;
         this.description = description;
         this.targetDate = targetDate;
         this.isCompleted = isCompleted;
     }
-    public Todo() {
 
-    }
-    private long id;
+
 
     @Override
     public String toString() {
@@ -67,6 +74,20 @@ public class Todo {
                 '}';
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Todo)) return false;
+        Todo todo = (Todo) o;
+        return getId() == todo.getId();
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getId());
+    }
+
+    private long id;
     private String username;
     private String description;
     private Date targetDate;
