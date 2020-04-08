@@ -1,8 +1,5 @@
 package com.colorpix.rest.webservices.restfulwebservices.todo;
 
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-
 import java.util.Date;
 import java.util.Objects;
 

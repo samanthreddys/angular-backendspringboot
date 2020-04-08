@@ -1,4 +1,4 @@
-package com.colorpix.rest.webservices.restfulwebservices.basicauthentication;
+package com.colorpix.rest.basic.authentication;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
